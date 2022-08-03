@@ -1,11 +1,13 @@
+const PORT = process.env.PORT || 80;
+
 // 1
 const express = require('express');
 const app = express();
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
 
-http.listen(80, () => {
-  console.log('listening on http://localhost:80');
+http.listen(PORT, () => {
+  console.log('listening on http://localhost:' + PORT);
 });
 
 
