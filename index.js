@@ -1,5 +1,5 @@
 
-const socket = io('http://localhost:80');
+const socket = io(window.location.origin);
 
 let selectedUser;
 
